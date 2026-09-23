@@ -1,0 +1,483 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#f4f3eb">
+<meta name="description" content="AssetFold: an IMD-first treasury design on Robinhood Chain. Explore the rules, risks and five forward scenarios.">
+<title>AssetFold — Real fees. Longer horizons.</title>
+<link rel="stylesheet" href="./assets/styles.css">
+<script type="module" src="./assets/app.js">
+</script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="header">
+<a class="brand" href="#">
+<span class="mark" aria-hidden="true">◩</span> AssetFold<span class="ticker">AFOLD</span>
+</a>
+<nav aria-label="Main navigation">
+<a href="#mechanism">The design</a>
+<a href="#model">The model</a>
+<a class="nav-report" href="./assets/report.md">Read the report ↗</a>
+</nav>
+</header>
+<main id="main">
+<section class="hero" id="overview">
+<div class="hero-copy">
+<p class="eyebrow">
+<span class="status-dot">
+</span> ROBINHOOD CHAIN · PROTOCOL PROPOSAL</p>
+<h1>Real fees.<br>Longer <em>horizons.</em>
+</h1>
+<p class="intro">An IMD-first token treasury that puts trading fees to work in stocks, gold and crypto majors.</p>
+<div class="mobile-metric"><span>BASE MODEL · MONTH 12 TREASURY</span><strong id="hero-mobile-value">$229,307</strong><small>From an assumed $100,000 start. Not a forecast.</small></div>
+<div class="actions">
+<a class="button" href="#model">Explore the scenarios <span>↗</span>
+</a>
+<a class="text-link" href="#mechanism">Follow the money ↓</a>
+</div>
+<p class="small">Designed by the IMD swarm. No emissions. No promised yield.</p>
+</div>
+<div class="hero-art" aria-label="Illustration of fees folding into a diversified treasury" role="img">
+<div class="orbit orbit-one">
+</div>
+<div class="orbit orbit-two">
+</div>
+<span class="asset asset-btc">BTC</span>
+<span class="asset asset-gold">GOLD</span>
+<span class="asset asset-stock">STOCKS</span>
+<div class="fold fold-back">
+</div>
+<div class="fold fold-front">
+<span>AF</span>
+<small>ASSETFOLD</small>
+</div>
+<span class="art-caption">ONE TREASURY. MANY HORIZONS.</span>
+</div>
+<div class="hero-bottom">
+<div>
+<p class="eyebrow">BASE SCENARIO · MONTH 12 TREASURY</p>
+<strong id="hero-value">$229,307</strong>
+<span>from an assumed $100,000 start</span>
+</div>
+<div class="verdict">
+<span class="pill">THE VERDICT</span>
+<h2>Works under conditions.</h2>
+<p>Trading must last. Eligible pools must exist. Conversions must clear. A forward model, not a backtest.</p>
+</div>
+</div>
+</section>
+<section id="concept">
+<div class="section-heading">
+<p class="eyebrow">01 / THE CONCEPT</p>
+<h2>A treasury built to stay in the market.</h2>
+</div>
+<div class="concept-grid">
+<article>
+<span class="index">01</span>
+<h3>Start with IMD.</h3>
+<p>Initial liquidity pairs AFOLD with IdentityMD. Every <strong>canonical-pool swap</strong> routes through IMD. Third-party pools can bypass it.</p>
+</article>
+<article>
+<span class="index">02</span>
+<h3>Own longer horizons.</h3>
+<p>Target stocks, gold, BTC and ETH, not memecoins. Diversification spreads risk; “long-lived” does not mean safe or limited to ±30% moves.</p>
+</article>
+<article>
+<span class="index">03</span>
+<h3>Earn, don’t print.</h3>
+<p>Income comes from real swap fees in protocol-owned liquidity and the canonical hook. No emissions and no new token printing.</p>
+</article>
+<article>
+<span class="index">04</span>
+<h3>Keep the books open.</h3>
+<p>The design calls for on-chain holdings, fee receipts and spending. This is a proposal, not a live treasury dashboard.</p>
+</article>
+<article>
+<span class="index">05</span>
+<h3>Built by the swarm.</h3>
+<p>Public rules, public contracts and an inspectable ledger are the intended proof of what the IMD swarm can deliver.</p>
+</article>
+</div>
+</section>
+<section id="mechanism" class="dark-section">
+<div class="section-heading">
+<p class="eyebrow">02 / FOLLOW THE MONEY</p>
+<h2>Every fee has a destination.</h2>
+<p>One canonical route. A deliberately patient treasury.</p>
+</div>
+<div class="flow">
+<article>
+<span>01 / SWAP</span>
+<h3>AFOLD ↔ IMD</h3>
+<p>Canonical pool only</p>
+</article>
+<b aria-hidden="true">→</b>
+<article>
+<span>02 / COLLECT</span>
+<h3>0.30% + 0.30%</h3>
+<p>Hook fee + LP fee</p>
+</article>
+<b aria-hidden="true">→</b>
+<article>
+<span>03 / ACCRUE</span>
+<h3>Treasury</h3>
+<p>Hold fees in-kind. Batch conversions.</p>
+</article>
+<b aria-hidden="true">→</b>
+<article>
+<span>04 / DEPLOY</span>
+<h3>Gated asset pools</h3>
+<p>Stocks · gold · BTC · ETH</p>
+</article>
+</div>
+<div class="income-split">
+<div>
+<strong>60%</strong>
+<span>Reinvest in asset liquidity</span>
+</div>
+<div>
+<strong>30%</strong>
+<span>Deepen AFOLD / IMD</span>
+</div>
+<div>
+<strong>10%</strong>
+<span>Operating & audit reserve</span>
+</div>
+</div>
+<p class="dark-note">Retained income stays protocol-owned. The model allocates 30% of positive income after operating costs to IMD liquidity; additions are part of treasury value, not extra value on top. Buybacks, burns and holder payments: 0%.</p>
+</section>
+<section id="parameters">
+<div class="section-heading">
+<p class="eyebrow">03 / THE RULEBOOK</p>
+<h2>Defined before the first swap.</h2>
+<p>Proposed design parameters, not deployed settings. Economic inputs are assumptions.</p>
+</div>
+<div class="parameter-grid">
+<div>
+<h3>Launch & fees</h3>
+<dl class="rules">
+<div>
+<dt>Maximum supply</dt>
+<dd>1,000,000,000 AFOLD · no mint</dd>
+</div>
+<div>
+<dt>Canonical liquidity</dt>
+<dd>70% · permanent protocol-owned position</dd>
+</div>
+<div>
+<dt>Treasury inventory</dt>
+<dd>25% · 24-month cliff; liquidity pairing only</dd>
+</div>
+<div>
+<dt>Swarm contributors</dt>
+<dd>5% · 12-month cliff, then 36-month linear vest</dd>
+</div>
+<div>
+<dt>Swap charge</dt>
+<dd>0.60% before gas / routing · static 0.30% hook + 0.30% LP</dd>
+</div>
+<div>
+<dt>Modeled capture</dt>
+<dd>0.57% · assumes 90% of active canonical LP owned</dd>
+</div>
+<div>
+<dt>Launch gate</dt>
+<dd>≥$50,000 canonical TVL; six months of operating costs funded</dd>
+</div>
+</dl>
+</div>
+<div>
+<h3>Target treasury exposures</h3>
+<table>
+<caption>Deployable NAV targets; unavailable assets stay in USDG.</caption>
+<thead>
+<tr>
+<th scope="col">Asset</th>
+<th scope="col">Weight</th>
+<th scope="col">LP range</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>USDG / cash</td>
+<td>20%</td>
+<td>≥15% idle</td>
+</tr>
+<tr>
+<td>BTC</td>
+<td>20%</td>
+<td>±20%</td>
+</tr>
+<tr>
+<td>ETH</td>
+<td>10%</td>
+<td>±20%</td>
+</tr>
+<tr>
+<td>Tokenized gold</td>
+<td>15%</td>
+<td>±12%</td>
+</tr>
+<tr>
+<td>S&P 500 ETF</td>
+<td>15%</td>
+<td>±15%</td>
+</tr>
+<tr>
+<td>Nasdaq-100 ETF</td>
+<td>10%</td>
+<td>±18%</td>
+</tr>
+<tr>
+<td>Apple / Microsoft</td>
+<td>5% each</td>
+<td>±18%</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="details-grid">
+<details>
+<summary>Conversion & pool entry gates</summary>
+<p>Convert weekly, capped at 2% of trailing seven-day IMD pool TVL, ≤0.50% impact and within 1% of a 30-minute TWAP. Otherwise retain fees as “conversion pending.”</p>
+<p>Each asset pool needs 30 consecutive days of passing gates: verified issuer/contracts, permitted transfer and AMM use, legal memo, no freeze/redemption anomaly, ≥$250,000 TVL, ≥$50,000 median daily volume, reliable reference price and a $5,000 exit at ≤1% impact.</p>
+</details>
+<details>
+<summary>Caps & rebalancing rules</summary>
+<p>20% per asset; 5% per single stock; 10% per pool; 20% per issuer/custodian; 30% shared bridge/oracle. Class caps: stablecoins 30%, crypto majors 35%, metals 20%, equity ETFs 35%.</p>
+<p>Check weekly. Rebalance beyond 5 percentage points from target, out of range, or on gate failure. Use fees first; ≤10% NAV moved per week with the same impact guard.</p>
+</details>
+<details>
+<summary>Market close & drawdown controls</summary>
+<p>From 30 minutes before equity close until 30 minutes after reopening, move half of equity LP to USDG and widen the remainder to ±30%. No new equity ranges on weekends. A reference gap >2% removes remaining active equity LP until 30 minutes after reopening and a gap below 1% for 15 minutes.</p>
+<p>At 20% drawdown, stop new deployment and remove available active LP to approved stablecoins. At 30%, recovery mode: collect fees only. Restart needs a 14-day timelock, incident report and fresh gates. Permanent canonical liquidity may be unrecoverable.</p>
+<p>Halt a pool on reference disagreement >1%, or a stablecoin outside $0.99–$1.01 for 15 minutes.</p>
+</details>
+</div>
+</section>
+<section id="model" class="model-section">
+<div class="section-heading model-heading">
+<div>
+<p class="eyebrow">04 / THE FORWARD MODEL</p>
+<h2>The volume has to show up.</h2>
+<p>Five paths. Twelve months. All economic inputs are assumptions.</p>
+</div>
+<a class="text-link" href="./assets/scenarios.csv" download>Download model CSV ↗</a>
+</div>
+<div class="scenario-buttons" role="group" aria-label="Choose model scenario">
+<button data-scenario="base" aria-pressed="true">Base</button>
+<button data-scenario="bull" aria-pressed="false">Bull</button>
+<button data-scenario="bear" aria-pressed="false">Bear</button>
+<button data-scenario="token_trading_fades" aria-pressed="false">Trading fades</button>
+<button data-scenario="imd_price_falls_70pct" aria-pressed="false">IMD −70%</button>
+</div>
+<div class="model-summary" aria-live="polite">
+<h3 id="scenario-title">Base scenario</h3>
+<p id="scenario-description">Token volume starts at $2M/month and grows 2% monthly. Market return +0.3%; LP drag 0.15% monthly.</p>
+</div>
+<div class="model-stats">
+<div>
+<span>Month 12 treasury</span>
+<strong id="nav-value">$229,307</strong>
+</div>
+<div>
+<span>Month 12 gross income</span>
+<strong id="income-value">$14,474</strong>
+</div>
+<div>
+<span>Total IMD liquidity added</span>
+<strong id="imd-value">$37,949</strong>
+</div>
+</div>
+<div class="charts">
+<figure>
+<figcaption>Treasury value <span>USD · month end</span>
+</figcaption>
+<svg id="nav-chart" viewBox="0 0 580 260" role="img" aria-label="Treasury value by month">
+</svg>
+</figure>
+<figure>
+<figcaption>Token volume vs. break-even <span>USD / month</span>
+</figcaption>
+<div class="legend">
+<span>
+<i>
+</i>Canonical volume</span>
+<span>
+<i class="dashed">
+</i>Break-even</span>
+</div>
+<svg id="volume-chart" viewBox="0 0 580 260" role="img" aria-label="Token volume and break-even volume by month">
+</svg>
+</figure>
+</div>
+<p id="breakpoint-note" class="breakpoint">
+</p>
+<p class="small">Break-even covers LP losses and operating costs, not market losses or price shocks. Charts use the accepted CSV. USD figures are rounded to the nearest dollar; downloads retain cents.</p>
+<details class="model-data">
+<summary>Inspect monthly numbers & assumptions</summary>
+<p>Assumed opening treasury: $100,000, including $50,000 IMD. Asset LP fees: $300/month from $2M volume × 0.30% fee × 5% ownership. Operating costs: $2,500/month. IMD addition: 30% of positive net income (gross income minus operating costs).</p>
+<p>The model does not simulate conversion capacity, range execution, entry gates or circuit breakers. Its arithmetic is not evidence that the proposed controls or volume will work.</p>
+<div class="table-scroll" tabindex="0" role="region" aria-label="Monthly scenario data">
+<table>
+<thead>
+<tr>
+<th>Month</th>
+<th>Treasury</th>
+<th>Gross income</th>
+<th>IMD added</th>
+<th>Token volume</th>
+<th>Break-even</th>
+</tr>
+</thead>
+<tbody id="monthly-rows">
+</tbody>
+</table>
+</div>
+</details>
+<noscript>
+<p>Interactive charts require JavaScript. <a href="./assets/scenarios.csv">Read all five scenarios in the CSV</a> or <a href="./assets/report.md">open the report</a>.</p>
+</noscript>
+</section>
+<section id="problems">
+<div class="section-heading">
+<p class="eyebrow">05 / RESEARCH → DESIGN</p>
+<h2>Constraints, not footnotes.</h2>
+</div>
+<div class="problem-list">
+<article>
+<span>01</span>
+<div>
+<h3>There isn’t a year of chain history.</h3>
+<p>The prior research supplies a July 1, 2026 launch and roughly 84 days of history. We use forward assumptions, not a fabricated backtest.</p>
+</div>
+<b>Model honestly</b>
+</article>
+<article>
+<span>02</span>
+<div>
+<h3>A hook cannot own every route.</h3>
+<p>Only the canonical pool receives treasury liquidity and official routing support. Competing pools remain possible. No fee monopoly is assumed.</p>
+</div>
+<b>Earn the route</b>
+</article>
+<article>
+<span>03</span>
+<div>
+<h3>The observed IMD pool is tiny.</h3>
+<p>At the prior research’s ~$7,000 depth, the conversion cap permits only $140/week. Batch fees, pair in-kind or wait. Never force treasury growth through bad execution.</p>
+</div>
+<b>Deploy patiently</b>
+</article>
+<article>
+<span>04</span>
+<div>
+<h3>If trading fades, so does income.</h3>
+<p>In the fade path, volume drops 90% by month 3 and IMD additions stop after month 2. Pause expansion if rolling three-month volume is below modeled break-even.</p>
+</div>
+<b>Show the failure</b>
+</article>
+<article>
+<span>05</span>
+<div>
+<h3>Revenue sharing brings legal risk.</h3>
+<p>Retain earnings instead of paying holders or buying back tokens. That lowers relative signaling risk; a managed treasury and tokenized securities still require counsel.</p>
+</div>
+<b>Retain earnings</b>
+</article>
+</div>
+</section>
+<section id="comparison">
+<div class="section-heading">
+<p class="eyebrow">06 / THE NEIGHBORHOOD</p>
+<h2>A different mandate. Not a claim to be best.</h2>
+<p>Descriptions inherited from the accepted research, checked September 23, 2026.</p>
+</div>
+<div class="competitors">
+<article>
+<a href="https://www.shroomnetwork.com/">SHROOM ↗</a>
+<p>Stock-token liquidity, MU rewards and fee-funded buyback/burn.</p>
+<small>AFOLD adds an IMD-first route and broader assets, without distributions. SHROOM may have stronger traction and holder incentives.</small>
+</article>
+<article>
+<a href="https://twofold.fi/docs.html">Twofold ↗</a>
+<p>DualPool fees, USDG vault yield, market-hours controls and TWO staking.</p>
+<small>AFOLD avoids lending-vault and staking dependencies. Twofold may put idle cash to work more efficiently.</small>
+</article>
+<article>
+<a href="https://www.whatthehook.io/">What The Hook ↗</a>
+<p>Cross-pool arbitrage with realized profits shared across participants.</p>
+<small>AFOLD uses a fixed fee to build a treasury. It claims no advantage in execution efficiency.</small>
+</article>
+<article>
+<a href="https://docs.ponsfamily.com/">Pons ↗</a>
+<p>Token launch and trading infrastructure with standardized mechanics.</p>
+<small>A launchpad, not a direct substitute for one diversified treasury.</small>
+</article>
+<article>
+<a href="https://pipepad.fun/docs">PipePad ↗</a>
+<p>Fixed-supply PIPEDOG pairs, locked liquidity and fee routing.</p>
+<small>AFOLD has a narrower asset mandate. PipePad is more suited to repeat launches.</small>
+</article>
+<article>
+<h3>NetNet</h3>
+<p>Mechanism unverified in the accepted research.</p>
+<small>No adequate primary documentation located. No responsible “better” claim can be made.</small>
+</article>
+</div>
+</section>
+<section id="risks" class="risk-section">
+<div>
+<p class="eyebrow">07 / READ THE DOWNSIDE</p>
+<h2>Durable assets.<br>Real ways to lose.</h2>
+<p>Works under conditions. It does not work just because the assets last.</p>
+<a href="./assets/report.md" class="text-link">Read every launch gate ↗</a>
+</div>
+<div>
+<details open>
+<summary>Volume is the load-bearing assumption.</summary>
+<p>The fade scenario finishes below the assumed opening treasury. Asset LP fees alone do not cover modeled costs. The IMD shock case recovers only because token volume keeps growing.</p>
+</details>
+<details>
+<summary>Liquidity is not the same as cash.</summary>
+<p>LP positions can lose to holding, leave their ranges, or become one-sided. Reopening gaps, correlated selloffs and conversion backlogs can overwhelm diversification. ±30% is not a bound on losses.</p>
+</details>
+<details>
+<summary>Assets and access may not exist.</summary>
+<p>Target weights are conditional, not proof of eligible pools. Tokenized shares may be derivatives with issuer, freeze, redemption and jurisdiction risks. Smart contracts, bridges, oracles and stablecoins can fail.</p>
+</details>
+<details>
+<summary>A design is not a deployed protocol.</summary>
+<p>Launch requires audited contracts, legal clearance, two eligible pools, funded operating runway and an impact-compliant conversion quote. Pause expansion if backlog exceeds 10% of NAV or fewer than two non-correlated assets qualify. No token is a claim on treasury assets or income.</p>
+</details>
+</div>
+</section>
+<section id="lore" class="lore">
+<p class="eyebrow">08 / THE FIRST FOLD</p>
+<h2>Build something<br>that outlasts a season.</h2>
+<div class="lore-copy">
+<p>AssetFold began with a simple refusal: a treasury should not survive by printing another token. It folds each real trading fee back into markets intended to outlast a season. Its first fold is IMD, the root pair that gives the IdentityMD ecosystem deeper ground on Robinhood Chain. The next folds spread risk across Bitcoin, Ether, gold, broad equity baskets, and only the largest individual companies.</p>
+<p>Some folds will go out of range, and some assets will fail their gates; the book shows both. When the old markets sleep, AssetFold pulls in its edges rather than pretending the gap cannot happen. No holder is promised a dividend, a burn, or a rescue bid. The artifact is the point: public contracts, public rules, and a public ledger of what the IMD swarm can build.</p>
+</div>
+<aside class="ticker-check">
+<strong>AssetFold / $AFOLD</strong>
+<p>The accepted report’s September 23, 2026 searches found no exact AFOLD listing on <a href="https://www.coingecko.com/en/search?query=AFOLD">CoinGecko</a>, <a href="https://coinmarketcap.com/search/?q=AFOLD">CoinMarketCap</a> or <a href="https://dexscreener.com/search?q=AFOLD">DexScreener</a>. This is not a reservation or guarantee. Recheck before deployment.</p>
+</aside>
+</section>
+</main>
+<footer>
+<a class="brand" href="#">◩ AssetFold</a>
+<p>An IMD swarm research artifact.<br>Proposal · September 23, 2026</p>
+<div>
+<a href="./assets/report.md">Report</a>
+<a href="./assets/model.py" download>Python model</a>
+<a href="./assets/scenarios.csv" download>CSV</a>
+<a href="./assets/sources.md">Sources</a>
+</div>
+<small>Scenario analysis, not investment advice or a return promise.</small>
+</footer>
+</body>
+</html>
